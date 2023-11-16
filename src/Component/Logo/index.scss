@@ -1,0 +1,61 @@
+.logoWrapper {
+  position: fixed;
+  right: calc(18px + var(--app-margin));
+  bottom: calc(var(--platform-row-height) + var(--app-margin));
+
+  & > .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--submit-button-width);
+    height: var(--platform-row-height);
+
+    & > img {
+      height: var(--button-size);
+    }
+  }
+
+  z-index: 1;
+}
+
+.menuHover {
+  position: absolute;
+  right: -18px;
+  bottom: 100%;
+  background-color: #1f2b36;
+  color: #fafafa;
+  font-weight: 400;
+  font-size: var(--small-font-size);
+  transition: opacity 0.25s;
+  opacity: 0;
+
+  &-item {
+    display: flex;
+    align-items: center;
+    height: var(--button-size);
+    padding-left: 18px;
+
+    &:hover {
+      background-color: #78c7bb;
+    }
+
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: var(--button-size);
+      height: var(--button-size);
+      margin: 0 12px 0 4px;
+    }
+
+    & > span {
+      flex: 1;
+      line-height: var(--button-size);
+      text-align: end;
+    }
+  }
+}
+
+body.sh-max .logoWrapper {
+  right: calc((100% - var(--app-container-width)) / 2 + 18px);
+}

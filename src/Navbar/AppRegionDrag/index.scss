@@ -1,0 +1,7 @@
+.appRegionDrag {
+  -webkit-app-region: drag;
+  height: 100%;
+}
+body.maximized .appRegionDrag {
+  -webkit-app-region: none;
+}

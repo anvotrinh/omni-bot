@@ -1,0 +1,21 @@
+.errorPage {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  row-gap: 10px;
+
+  &-restartBtn {
+    margin-top: 12px;
+    border-radius: 4px;
+    background-color: #78c7bb;
+    padding: 9px 25px;
+    font-size: var(--normal-font-size);
+    font-weight: 700;
+    color: white;
+
+    &:hover {
+      background-color: #71bfac;
+    }
+  }
+}

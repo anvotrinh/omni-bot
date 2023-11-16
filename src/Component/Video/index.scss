@@ -1,0 +1,20 @@
+.q1Video {
+  position: relative;
+}
+.q1Video > video {
+  width: 100%;
+  outline: 2px solid white;
+  outline-offset: -2px;
+}
+.q1Video-replayBtn {
+  position: absolute;
+  top: calc(60% - 43px);
+  left: calc(50% - 43px);
+}
+.q1Video-replayBtn svg {
+  width: 86px;
+  height: 86px;
+}
+.q1Video-replayBtn:hover svg path {
+  fill: #5dcaa4;
+}

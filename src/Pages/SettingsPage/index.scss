@@ -1,0 +1,129 @@
+.settingsPage {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px; //20px;
+  background-color: white;
+  animation: page-appear 0.2s;
+
+  --setting-row-padding: 50px;
+}
+
+.settingsPage-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  width: 100%;
+}
+
+.settingsPage-row {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 0 var(--setting-row-padding);
+}
+
+.settingsPage-row > input {
+  height: 32px;
+  background: transparent;
+  box-shadow: 0px 0px 16px 0px rgba(85, 90, 98, 0.1);
+  border-radius: 3px;
+  text-align: center;
+  border: none;
+  outline-color: var(--app-background-color);
+  z-index: 1;
+  font-size: var(--normal-font-size);
+}
+
+.settingsPage-row > input.hasPlaceholder {
+  color: #92929d;
+}
+
+.settingsPage-row > .deleteBtn {
+  position: absolute;
+  right: var(--setting-row-padding);
+  z-index: 2;
+
+  &:hover path {
+    fill: white;
+  }
+}
+
+.settingsPage-row > .noneHotkey {
+  color: #92929d;
+}
+
+.settingsPage-row > .inputError {
+  position: absolute;
+  bottom: -20px;
+  right: var(--setting-row-padding);
+  font-size: var(--small-font-size);
+  color: red;
+}
+
+.settingsPage-maxMemorySuffix {
+  position: absolute;
+  right: calc(25px + var(--setting-row-padding));
+}
+
+.settingsPage-row2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.settingsPage-row2 > textarea {
+  flex: 1;
+  margin-top: 14px;
+  padding: 10px;
+  resize: none;
+  font-size: var(--normal-font-size);
+}
+
+.settingsPage-saveClose {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.settingsPage-description {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  color: #92929d;
+  margin-bottom: 20px;
+}
+
+.settingsPage-descriptionTitle {
+  margin-bottom: 20px;
+}
+
+.settingsPage-descriptionTitle,
+.settingsPage-descriptionContent {
+  font-size: var(--small-font-size);
+  width: 100%;
+  text-align: center;
+}
+
+body.sh-768 .settingsPage {
+  padding-top: 60px;
+}
+
+body.sh-900 .settingsPage {
+  padding-top: 40px;
+}
+
+body.sh-992 .settingsPage {
+  padding-top: 50px;
+}
+
+body.sh-1080 .settingsPage {
+  padding-top: 80px;
+}
+
+body.sh-max .settingsPage {
+  padding-top: 120px;
+}

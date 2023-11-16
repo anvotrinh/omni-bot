@@ -1,0 +1,41 @@
+.pageNavbar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: var(--app-margin);
+  left: var(--app-margin);
+  right: var(--app-margin);
+  height: var(--app-top-menu-bar-height);
+  z-index: 3;
+  border-top-right-radius: var(--app-border);
+  border-top-left-radius: var(--app-border);
+  background-color: var(--app-background-color);
+  /* border: 1px solid gray;
+  border-bottom: none; */
+}
+.pageNavbar_empty {
+  background-color: white;
+}
+.pageNavbar-btnGroup {
+  display: flex;
+  padding-right: 10px;
+}
+.pageNavbar-btnGroup:hover {
+  background-color: #38536b;
+  border-radius: 6px;
+}
+.pageNavbar-btnText {
+  color: #92929d;
+  font-weight: 500;
+  font-size: var(--small-font-size);
+  line-height: var(--button-size);
+}
+.pageNavbar-title {
+  position: absolute;
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--small-font-size);
+  line-height: var(--button-size);
+  color: white;
+}

@@ -1,0 +1,30 @@
+.buttonSubmit {
+  position: absolute;
+  bottom: 6px; //4px;
+  right: 18px;
+}
+
+body.sh-max .buttonSubmit {
+  bottom: 8px;
+}
+
+body.sh-1080 .buttonSubmit {
+  bottom: 8px;
+}
+
+body.sh-992 .buttonSubmit {
+  bottom: 8px;
+}
+
+body.sh-900 .buttonSubmit {
+  bottom: 6px;
+}
+
+body.sh-768 .buttonSubmit {
+  bottom: 6px;
+}
+
+.buttonSubmit > img {
+  width: var(--submit-button-width);
+  aspect-ratio: 1.6875; // 54x32
+}

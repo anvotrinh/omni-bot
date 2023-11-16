@@ -1,0 +1,10 @@
+.appOverlay {
+  position: fixed;
+  top: var(--app-margin);
+  bottom: var(--app-margin);
+  left: var(--app-margin);
+  right: var(--app-margin);
+  background: rgba(31, 43, 54, 0.15);
+  border-radius: 16px;
+  z-index: 2;
+}

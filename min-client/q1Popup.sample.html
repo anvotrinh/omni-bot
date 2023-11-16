@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Q1 Popup</title>
+    <link rel="stylesheet" href="dist/bundle.css" />
+    <link rel="stylesheet" href="dist/static/css/main.sample.css" />
+    <style>
+      body {
+        opacity: 0;
+        transition: opacity 0.5s;
+        box-shadow: none;
+      }
+      #react-root {
+        height: 100%;
+      }
+      @font-face {
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 300;
+        font-stretch: 100%;
+        src: url('data/Fonts/Satoshi-Light.woff2') format('woff2');
+      }
+
+      @font-face {
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: 100%;
+        src: url('data/Fonts/Satoshi-Regular.woff2') format('woff2');
+      }
+
+      @font-face {
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 500;
+        font-stretch: 100%;
+        src: url('data/Fonts/Satoshi-Medium.woff2') format('woff2');
+      }
+
+      @font-face {
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: 100%;
+        src: url('data/Fonts/Satoshi-Bold.woff2') format('woff2');
+      }
+
+      @font-face {
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 900;
+        font-stretch: 100%;
+        src: url('data/Fonts/Satoshi-Black.woff2') format('woff2');
+      }
+
+      @font-face {
+        font-family: 'Satoshi';
+        font-style: italic;
+        font-weight: 300;
+        font-stretch: 100%;
+        src: url('data/Fonts/Satoshi-LightItalic.woff2') format('woff2');
+      }
+
+      @font-face {
+        font-family: 'Satoshi';
+        font-style: italic;
+        font-weight: 400;
+        font-stretch: 100%;
+        src: url('data/Fonts/Satoshi-Italic.woff2') format('woff2');
+      }
+
+      @font-face {
+        font-family: 'Satoshi';
+        font-style: italic;
+        font-weight: 500;
+        font-stretch: 100%;
+        src: url('data/Fonts/Satoshi-MediumItalic.woff2') format('woff2');
+      }
+
+      @font-face {
+        font-family: 'Satoshi';
+        font-style: italic;
+        font-weight: 700;
+        font-stretch: 100%;
+        src: url('data/Fonts/Satoshi-BoldItalic.woff2') format('woff2');
+      }
+
+      @font-face {
+        font-family: 'Satoshi';
+        font-style: italic;
+        font-weight: 900;
+        font-stretch: 100%;
+        src: url('data/Fonts/Satoshi-BlackItalic.woff2') format('woff2');
+      }
+    </style>
+  </head>
+
+  <body class="focused">
+    <div id="react-root" data-mode="popup"></div>
+    <script>
+      const { ipcRenderer } = require('electron');
+      window.ipc = ipcRenderer;
+      ipc.on('q1-screenSizeClass', function (e, { className }) {
+        document.body.classList.remove(
+          'sh-768',
+          'sh-900',
+          'sh-992',
+          'sh-1080',
+          'sh-max',
+          'sh-mini',
+        );
+        document.body.classList.add(className);
+      });
+    </script>
+    <script src="dist/static/js/main.sample.js"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+.noticePopupWrapper {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.25s;
+  transition-delay: 0.15s;
+  z-index: 1;
+}
+
+.noticePopupOverlay {
+  position: fixed;
+  top: var(--app-margin);
+  bottom: var(--app-margin);
+  left: var(--app-margin);
+  right: var(--app-margin);
+  background: rgba(31, 43, 54, 0.4);
+  border-radius: 16px;
+}
+
+.noticePopup {
+  display: flex;
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 1;
+  box-shadow: 0 0 20px rgb(136 136 136 / 25%);
+  & > iframe {
+    flex: 1;
+    border: none;
+  }
+  &_closeBtn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 10px;
+    right: 12px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,84 @@
+.q1Interpreter {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  &-loading {
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+  }
+  &-loadingText {
+    margin-top: 10px;
+  }
+}
+.q1Interpreter-content {
+  flex: 1;
+}
+.terminal {
+  position: relative;
+  height: 100%;
+  &-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    padding: 20px 10px;
+    overflow-y: auto;
+    z-index: 1;
+
+    & > p:has(a[href='qute']) {
+      margin: 0 !important;
+      padding: 10px;
+      color: white;
+      background-color: grey;
+      pointer-events: none;
+    }
+  }
+}
+
+.showAPIKeyButton {
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  border: none;
+  z-index: 1;
+}
+.apiKeyInput {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  bottom: 60px;
+  left: 20px;
+  right: 20px;
+  z-index: 1;
+  & > button {
+    font-size: 16px !important;
+    padding: 5px 16px !important;
+  }
+  & > input {
+    font-size: 16px !important;
+    padding: 0 150px 0 16px;
+    flex: 1;
+    height: 40px;
+    text-align: left;
+  }
+  &-btnGroup {
+    position: absolute;
+    display: flex;
+    right: 8px;
+    gap: 8px;
+    z-index: 1;
+  }
+  &-btnCancel {
+    background-color: red;
+    &:hover {
+      background-color: brown;
+    }
+  }
+}

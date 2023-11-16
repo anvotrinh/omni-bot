@@ -1,0 +1,17 @@
+.navbarNotification {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: white;
+  &-title {
+    font-size: var(--small-font-size);
+    color: #253540;
+  }
+  &-restartText {
+    margin-top: var(--app-top-menu-bar-height);
+    color: #2fb494;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}

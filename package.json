@@ -1,0 +1,75 @@
+{
+  "name": "react-embedding-test",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@dnd-kit/core": "^6.0.8",
+    "@dnd-kit/sortable": "^7.0.2",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "classnames": "^2.3.2",
+    "draggabilly": "^3.0.0",
+    "github-markdown-css": "^5.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^4.0.11",
+    "react-markdown": "^8.0.7",
+    "react-scripts": "5.0.1",
+    "react-syntax-highlighter": "^15.5.0",
+    "remark-gfm": "^3.0.1",
+    "sass": "^1.64.1",
+    "slate": "^0.94.1",
+    "slate-history": "^0.93.0",
+    "slate-hyperscript": "^0.77.0",
+    "slate-react": "^0.95.0",
+    "tar": "^6.1.15",
+    "web-vitals": "^2.1.4",
+    "xterm": "^5.3.0",
+    "xterm-addon-serialize": "^0.11.0"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run build && node modify-index-html.js\" \"cd min-client && npm run build\" && concurrently \"cd min-client && npm run watch\" \"cd min-client && npm run startElectron\"",
+    "postinstall": "cd min-client && npm install && npm run rebuild && cd .. && cd electron-delta && npm install && cd .. && cd electron-delta-updater && npm install",
+    "buildReact": "npm run build && node modify-index-html.js",
+    "buildWindows": "npm run buildReact && cd min-client && npm run buildWindows",
+    "buildWindowsPostponeUpload": "npm run buildReact && cd min-client && npm run buildWindowsPostponeUpload",
+    "codeSignWindows": "cd min-client && npm run codeSignWindows",
+    "uploadWindows": "cd min-client && npm run uploadWindows",
+    "buildMac": "npm run buildReact && cd min-client && npm run buildMac",
+    "buildLinux": "npm run buildReact && cd min-client && npm run buildAppImage",
+    "updateLatestMajor": "cd min-client && npm run updateLatestMajor",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject",
+    "lint": "eslint --fix --ext .js,.jsx src/"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "concurrently": "^8.2.0",
+    "fs-extra": "^11.1.1",
+    "react-app-rewired": "^2.2.1"
+  }
+}

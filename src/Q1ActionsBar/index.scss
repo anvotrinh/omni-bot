@@ -1,0 +1,76 @@
+.actionList {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  height: var(--platform-row-height);
+  padding: 0 16px;
+  background-color: var(--app-background-color);
+}
+
+.actionItemList {
+  column-gap: 3px;
+}
+
+.actionItemWrapper {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin: var(--icon-vertical-margin) 0;
+
+  &:hover > .actionItem {
+    background-color: #38536b;
+    border-radius: 6px;
+  }
+}
+
+.actionItem {
+  display: flex;
+  width: var(--button-size);
+  height: var(--button-size);
+  align-items: center;
+  justify-content: center;
+
+  & > svg {
+    width: var(--platform-icon-size);
+    height: var(--platform-icon-size);
+  }
+}
+.actionItem.active::after {
+  content: '';
+  position: absolute;
+  width: var(--platform-icon-size);
+  height: calc(var(--platform-icon-size) * 0.57);
+  bottom: calc(var(--platform-icon-size) * -0.43);
+  background: white;
+  border-radius: calc(var(--platform-icon-size) * 0.86);
+}
+
+// media query base on PC screen height
+body.sh-768 .platform-bar {
+  & .actionItemList {
+    column-gap: 4.5px;
+  }
+}
+
+body.sh-900 .platform-bar {
+  & .actionItemList {
+    column-gap: 5px;
+  }
+}
+
+body.sh-992 .platform-bar {
+  & .actionItemList {
+    column-gap: 10px;
+  }
+}
+
+body.sh-1080 .platform-bar {
+  & .actionItemList {
+    column-gap: 12px;
+  }
+}
+
+body.sh-max .platform-bar {
+  & .actionItemList {
+    column-gap: 12px;
+  }
+}

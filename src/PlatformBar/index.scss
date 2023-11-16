@@ -1,0 +1,138 @@
+.platform-actions {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: var(--platform-row-height);
+  bottom: 0;
+  right: calc(18px + var(--submit-button-width) + 2px); // + 2px gap
+}
+
+.platform-bar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--app-background-color);
+  overflow: hidden;
+  height: var(--platform-row-height);
+}
+
+.platform-noOther {
+  height: var(--platform-row-height);
+  width: 100%;
+  padding-left: 6px;
+  line-height: var(--platform-row-height);
+}
+
+.platform-noOther > span {
+  font-size: var(--large-font-size);
+  color: #92929d;
+}
+
+.platform-icons {
+  margin: 0;
+  box-sizing: content-box;
+  display: inline-flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  padding-left: 16px;
+  padding-right: calc(16px + var(--logo-and-expand-width));
+}
+
+.platform-iconList {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  column-gap: 3px; //4px;
+}
+
+.tabDivWrapper {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin: var(--icon-vertical-margin) 0;
+}
+
+// .tabDivWrapper:nth-child(10) {
+//   margin-right: var(--logo-and-expand-width);
+// }
+.tabDivWrapper:hover > .tabDiv {
+  background-color: #38536b;
+  border-radius: 6px;
+}
+
+.tabDiv {
+  display: flex;
+  width: var(--button-size);
+  height: var(--button-size);
+  align-items: center;
+  justify-content: center;
+}
+
+.tabDiv > svg {
+  width: var(--platform-icon-size);
+  height: var(--platform-icon-size);
+}
+
+.tabDivIcon {
+  width: var(--platform-icon-size);
+  height: var(--platform-icon-size);
+  border-radius: 4px;
+  background-size: contain;
+  background-color: white;
+}
+
+.tabDivChar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  padding-right: 1px;
+  text-transform: uppercase;
+}
+
+.tabDiv.active::after {
+  content: '';
+  position: absolute;
+  width: var(--platform-icon-size);
+  height: calc(var(--platform-icon-size) * 0.57);
+  bottom: calc(var(--platform-icon-size) * -0.43);
+  background: white;
+  border-radius: calc(var(--platform-icon-size) * 0.86);
+}
+
+// media query base on PC screen height
+body.sh-768 .platform-bar {
+  & .platform-iconList {
+    column-gap: 4.5px;
+  }
+}
+
+body.sh-900 .platform-bar {
+  & .platform-iconList {
+    column-gap: 5px;
+  }
+}
+
+body.sh-992 .platform-bar {
+  & .platform-iconList {
+    column-gap: 10px;
+  }
+}
+
+body.sh-1080 .platform-bar {
+  & .platform-iconList {
+    column-gap: 12px;
+  }
+}
+
+body.sh-max .platform-bar {
+  & .platform-iconList {
+    column-gap: 12px;
+  }
+}
+
+body.sh-mini .platform-bar {
+  & .platform-iconList {
+    column-gap: 3px;
+  }
+}

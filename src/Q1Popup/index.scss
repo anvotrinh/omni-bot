@@ -1,0 +1,42 @@
+@use 'sass:math';
+@import '../App.scss';
+
+.q1Popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: white;
+  color: #465a6d;
+  font-size: var(--normal-font-size);
+  font-weight: 600;
+  line-height: 1.5;
+
+  &-shadow {
+    position: absolute;
+    top: var(--app-margin);
+    bottom: var(--app-margin);
+    right: var(--app-margin);
+    left: var(--app-margin);
+    box-shadow: 0 0 20px rgb(136 136 136 / 25%);
+    z-index: -2;
+    border-radius: 16px;
+  }
+}
+
+.q1Popup>span {
+  margin-left: 18px;
+}
+
+.q1PopupCaret {
+  position: absolute;
+  border-left: solid 10px transparent;
+  border-right: solid 10px transparent;
+  border-bottom: solid 15px #fff;
+  filter: drop-shadow(0 0 10px rgb(136 136 136 / 40%));
+  height: 0;
+  width: 0;
+  top: 5px;
+  left: calc(50% - 10px);
+  z-index: -1;
+}

@@ -1,0 +1,164 @@
+{
+  "platforms": [
+    {
+      "url": "https://chat.openai.com",
+      "alias": "gp",
+      "name": "ChatGPT",
+      "color": "#FFB827",
+      "userAgent": "desktop_windows",
+      "zoomLevel": 0.9,
+      "state": "awake",
+      "isPlatform": true
+    },
+    {
+      "url": "https://claude.ai",
+      "alias": "cl",
+      "name": "Claude-2",
+      "color": "#D19B75",
+      "userAgent": "desktop_windows",
+      "zoomLevel": 0.9,
+      "state": "awake",
+      "isPlatform": true
+    },
+    {
+      "url": "https://www.bing.com/chat",
+      "alias": "bi",
+      "name": "Bing Chat",
+      "color": "#FE7E43",
+      "userAgent": "desktop_windows",
+      "zoomLevel": 1,
+      "state": "awake",
+      "isPlatform": true
+    },
+    {
+      "url": "https://bard.google.com",
+      "alias": "ba",
+      "name": "Bard",
+      "color": "#8C71FF",
+      "userAgent": "desktop_windows",
+      "zoomLevel": 1,
+      "state": "awake",
+      "isPlatform": true
+    },
+    {
+      "url": "https://poe.com",
+      "alias": "po",
+      "name": "Poe",
+      "color": "#8C71FF",
+      "userAgent": "desktop_windows",
+      "zoomLevel": 0.9,
+      "state": "awake",
+      "isPlatform": true
+    },
+    {
+      "url": "https://character.ai",
+      "alias": "ch",
+      "name": "Character",
+      "color": "#8C71FF",
+      "userAgent": "desktop_windows",
+      "zoomLevel": 0.91,
+      "state": "awake",
+      "isPlatform": true
+    },
+    {
+      "url": "https://heypi.com/talk?scr",
+      "alias": "pi",
+      "name": "Pi",
+      "color": "#FFB827",
+      "userAgent": "desktop_windows",
+      "zoomLevel": 1,
+      "state": "awake",
+      "isPlatform": true
+    },
+    {
+      "url": "https://huggingface.co/chat",
+      "alias": "hu",
+      "name": "Huggingchat",
+      "color": "#8C71FF",
+      "userAgent": "desktop_windows",
+      "zoomLevel": 1,
+      "state": "awake",
+      "isPlatform": true
+    },
+    {
+      "url": "https://www.perplexity.ai",
+      "alias": "pe",
+      "name": "Perplexity",
+      "color": "#FC87B3",
+      "userAgent": "",
+      "zoomLevel": 1,
+      "state": "awake",
+      "isPlatform": true
+    },
+    {
+      "url": "https://google.com/ncr",
+      "alias": "go",
+      "name": "Google Search",
+      "color": "#FC87B3",
+      "userAgent": "desktop_windows",
+      "zoomLevel": 1,
+      "state": "awake",
+      "isPlatform": true
+    },
+    {
+      "url": "https://images.google.com",
+      "alias": "gi",
+      "name": "Google Images",
+      "color": "#FC87B3",
+      "userAgent": "desktop_windows",
+      "zoomLevel": 1,
+      "state": "awake",
+      "isPlatform": true
+    },
+    {
+      "url": "https://maps.google.com",
+      "alias": "mp",
+      "name": "Google Maps",
+      "color": "#FC87B3",
+      "userAgent": "desktop_windows",
+      "zoomLevel": 1,
+      "state": "awake",
+      "isPlatform": true
+    },
+    {
+      "url": "https://www.youtube.com",
+      "alias": "yt",
+      "name": "Youtube",
+      "color": "#FE7E43",
+      "userAgent": "desktop_windows",
+      "zoomLevel": 1,
+      "state": "awake",
+      "isPlatform": true
+    },
+    {
+      "url": "https://www.gmail.com",
+      "alias": "gm",
+      "name": "Gmail",
+      "color": "#FE7E43",
+      "userAgent": "desktop_windows",
+      "zoomLevel": 1,
+      "state": "awake",
+      "isPlatform": true
+    },
+    {
+      "url": "https://translate.google.com",
+      "alias": "tr",
+      "name": "Google Translate",
+      "color": "#FFB827",
+      "userAgent": "desktop_windows",
+      "zoomLevel": 1,
+      "state": "awake",
+      "isPlatform": true
+    },
+    {
+      "url": "https://www.calculator.net",
+      "alias": "ca",
+      "name": "Calculator",
+      "color": "#FC87B3",
+      "userAgent": "desktop_windows",
+      "zoomLevel": 1,
+      "state": "awake",
+      "isPlatform": true
+    }
+  ]
+}

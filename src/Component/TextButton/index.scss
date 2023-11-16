@@ -1,0 +1,13 @@
+.textButton {
+  border-radius: 4px;
+  padding: 9px 16px;
+  background: #59c6ad;
+  color: white;
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+  border: none;
+
+  &:hover {
+    background: #2b9f87;
+  }
+}

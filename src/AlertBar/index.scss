@@ -1,0 +1,21 @@
+.alertBar {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--app-background-color);
+  padding: 0 16px;
+}
+
+.alertBarMessage {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  height: var(--platform-row-height);
+  width: 100%;
+  padding-left: 6px;
+  line-height: var(--platform-row-height);
+
+  & > span {
+    font-size: var(--large-font-size);
+    color: #92929d;
+  }
+}

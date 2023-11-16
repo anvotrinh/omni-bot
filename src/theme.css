@@ -1,0 +1,9 @@
+.containerOpen{
+  display: flex;
+  flex-direction: 'row';
+  background-color: aqua;
+}
+
+.input{
+  background-color:violet
+}

@@ -1,0 +1,70 @@
+.inputWrapper {
+  position: relative;
+  //padding: 8px var(--submit-button-and-padding) 16px 24px;
+  padding: 6px var(--submit-button-and-padding) 12px 24px;
+  background-color: var(--app-background-color);
+}
+
+.inputScrollWrapper {
+  max-height: calc(4 * var(--compose-box-line-height));
+  overflow-y: auto;
+  padding-right: 6px;
+
+  &.scrollable {
+    padding-right: 0;
+  }
+}
+
+.inputScrollWrapper::-webkit-scrollbar {
+  width: 6px;
+}
+
+.inputScrollWrapper::-webkit-scrollbar-thumb {
+  background: #3e4a56;
+  border-radius: 4px;
+}
+
+.platformTitleText {
+  position: absolute;
+  top: 4px;
+  right: var(--submit-button-and-padding);
+  bottom: 0;
+  left: 24px;
+  font-size: var(--compose-box-font-size);
+  line-height: var(--compose-box-line-height);
+  font-style: italic;
+  color: #92929d;
+  background-color: var(--app-background-color);
+}
+
+.composeBox {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: var(--compose-box-font-size);
+  line-height: var(--compose-box-line-height);
+  color: white;
+}
+
+.composeBox span {
+  font-size: var(--compose-box-font-size);
+}
+
+#fakeInputScrollWrapper {
+  position: fixed;
+  display: none;
+}
+
+span[data-slate-placeholder='true'] {
+  color: #868691;
+  // color: #92929d;
+  font-weight: 450;
+  opacity: 1 !important;
+}
+
+body.sh-768 {
+  .inputWrapper {
+    padding-top: 3px;
+    padding-bottom: 6px;
+  }
+}

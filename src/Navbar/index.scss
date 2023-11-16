@@ -1,0 +1,68 @@
+.navButtonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: var(--app-top-menu-bar-height);
+  background-color: var(--app-background-color);
+
+  &-pin {
+    & > svg {
+      height: 70%;
+      width: 70%;
+    }
+  }
+}
+
+.navAdditionButtons {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+body:has(#findinpage-bar:not([hidden])) .navButtonWrapper {
+  & .navAdditionButtons .appRegionDrag,
+  & .fullRegionDrag,
+  & .appRegionDrag.full {
+    -webkit-app-region: no-drag;
+  }
+}
+
+.navButtonWrapper button {
+  transition: opacity 0.25s;
+  width: var(--button-size);
+  height: var(--button-size);
+}
+
+.navButtonWrapper button:disabled {
+  -webkit-app-region: drag;
+}
+
+.navButtonWrapper > span {
+  position: absolute;
+  font-style: normal;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  line-height: var(--button-size);
+  color: #92929d;
+}
+
+.fullRegionDrag {
+  position: absolute;
+  top: 0;
+  left: 92px;
+  right: 92px;
+  bottom: 0;
+  -webkit-app-region: drag;
+}
+
+#back-button:disabled,
+#forward-button:disabled {
+  -webkit-app-region: drag;
+}
+
+body.sh-mini {
+  & #topMenuBar {
+    display: none;
+  }
+}

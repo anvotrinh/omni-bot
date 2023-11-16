@@ -1,0 +1,56 @@
+.uploadFileBar {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--app-background-color);
+  gap: 20px;
+  padding: 11px 17px 6px 17px;
+}
+.uploadFileItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 120px;
+  height: 47px;
+  position: relative;
+  border-radius: 4px;
+  padding: 3px 6px;
+  background: #2e7fa4;
+}
+.uploadFileItem_loading {
+  align-items: center;
+  justify-content: center;
+}
+.uploadFileItem-name {
+  font-size: var(--large-font-size);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+}
+.uploadFileItem-detail {
+  font-size: var(--small-font-size);
+  color: white;
+}
+.uploadFileItem-deleteBtn {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+.uploadFileItem > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 47px;
+  border-radius: 4px;
+  object-fit: cover;
+}

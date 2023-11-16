@@ -1,0 +1,16 @@
+export const electronKeyMap = {
+  'ArrowDown': 'Down',
+  'ArrowUp': 'Up',
+  'ArrowLeft': 'Left',
+  'ArrowRight': 'Right',
+  'Home': 'Home',
+  'End': 'End',
+  'PageUp': 'PageUp',
+  'PageDown': 'PageDown',
+  ' ': 'Space',
+  'AudioVolumeUp': 'VolumeUp',
+  'AudioVolumeDown': 'VolumeDown',
+  'AudioVolumeMute': 'VolumeMute',
+  'MediaTrackNext': 'MediaNextTrack',
+  'MediaTrackPrevious': 'MediaPreviousTrack',
+};

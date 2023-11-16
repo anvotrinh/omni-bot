@@ -1,0 +1,15 @@
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+.iconButton:hover {
+  background-color: #38536b;
+}
+.iconButton.noCSSHover:hover {
+  background-color: unset;
+}
+.iconButton.noCSSHover.hover {
+  background-color: #38536b;
+}

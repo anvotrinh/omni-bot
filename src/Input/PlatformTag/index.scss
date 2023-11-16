@@ -1,0 +1,113 @@
+// the parent only take width space
+.platformTag {
+  display: inline-block;
+  position: relative;
+
+  --tag-padding-right: 4px;
+  --tag-padding-left: 7px;
+  --tag-content-gap: 5px;
+  --tag-delete-icon-size: 10px;
+  --tag-cap-height: 4px;
+
+  width: calc(
+    var(--tag-padding-left) + var(--platform-tag-icon-size) +
+      var(--tag-delete-icon-size) + var(--tag-content-gap) +
+      var(--tag-padding-right)
+  );
+  margin: 0 3px;
+}
+
+.platformTagContentWrapper {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  top: calc(
+    (2px - (var(--compose-box-font-size) + var(--compose-box-line-height)) / 2)
+  );
+  left: 0;
+  right: 0;
+  padding-bottom: 1px;
+  height: var(--platform-tag-height);
+}
+
+.platformTagContent {
+  display: flex;
+  align-items: center;
+  height: calc(100% - 3px);
+  padding-left: var(--tag-padding-left);
+  padding-right: var(--tag-padding-right);
+  border-radius: 3px;
+  background-color: #f2f2f2;
+  gap: var(--tag-content-gap);
+
+  & > svg {
+    width: var(--platform-tag-icon-size);
+    height: var(--platform-tag-icon-size);
+  }
+
+  &::after {
+    content: '';
+    display: none;
+    position: absolute;
+    height: var(--tag-cap-height);
+    top: calc(5px - var(--tag-cap-height));
+    right: 0;
+    left: 0;
+    background-color: #b7b7b7;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+
+  &:hover {
+    background-color: #b7b7b7;
+  }
+}
+
+.platformTag.active .platformTagContent {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+  &::after {
+    display: block;
+  }
+}
+
+.platformTagDeleteBtn {
+  display: flex;
+  width: var(--tag-delete-icon-size);
+  height: var(--tag-delete-icon-size);
+}
+
+.platformTag:nth-last-of-type(1) {
+  margin-right: 6px;
+}
+
+body.sh-max {
+  .platformTag {
+    --tag-cap-height: 5px;
+  }
+}
+
+body.sh-1080 {
+  .platformTag {
+    --tag-cap-height: 5px;
+  }
+}
+
+body.sh-992 {
+  .platformTag {
+    --tag-cap-height: 5px;
+  }
+}
+
+body.sh-900 {
+  .platformTag {
+    --tag-cap-height: 4px;
+  }
+}
+
+body.sh-768 {
+  .platformTag {
+    --tag-cap-height: 4px;
+  }
+}

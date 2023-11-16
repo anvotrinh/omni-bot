@@ -1,0 +1,302 @@
+$app-margin: 0px;
+
+body {
+  --app-margin: 0px;
+  --app-background-color: #273540;
+  --app-border: 0px;
+  --app-container-width: 0;
+  --logo-width-ratio: 1.6875; // 54x32
+  --submit-button-to-logo-ratio: 1.125;
+  --button-padding: 5px;
+  --top-menu-bar-padding: 3px;
+  --submit-button-width: 35px; //57px;
+
+  --small-font-size: 11px; //10px;
+  --normal-font-size: 12px;
+  --large-font-size: 11px;
+
+  --platform-icon-size: 13px; //20px;
+  --platform-tag-icon-size: 11px;
+  --platform-tag-height: 18px;
+  --compose-box-font-size: 12px; //16px;
+  --compose-box-line-height: 18px; //24px
+  --icon-vertical-margin: 4px;
+
+  --button-size: calc(var(--platform-icon-size) + 2 * var(--button-padding));
+  --app-top-menu-bar-height: calc(var(--button-size) + 2 * var(--top-menu-bar-padding));
+  --logo-and-expand-width: calc(var(--submit-button-width) + var(--button-size) + 2px);
+  // 18 right, 12 left
+  --submit-button-and-padding: calc(var(--submit-button-width) + 30px);
+  --platform-row-height: calc(var(--button-size) + 2 * var(--icon-vertical-margin));
+}
+
+.btn {
+  width: var(--button-size);
+  height: var(--button-size);
+}
+
+body.sh-max {
+  --app-border: 0;
+  --app-container-width: 600px;
+
+  --small-font-size: 12px;
+  --normal-font-size: 14px;
+  --large-font-size: 12px;
+
+  --platform-icon-size: 15px;
+  --platform-tag-icon-size: 11px;
+  --platform-tag-height: 22px;
+  --compose-box-font-size: 14px;
+  --compose-box-line-height: 22px;
+  --submit-button-width: 39px;
+
+  & .appContainer-content {
+    width: var(--app-container-width);
+  }
+}
+
+body.sh-1080 {
+  --small-font-size: 14px;
+  --normal-font-size: 16px;
+  --large-font-size: 16px;
+
+  --platform-icon-size: 20px;
+  --platform-tag-icon-size: 16px;
+  --platform-tag-height: 26px;
+  --compose-box-font-size: 16px;
+  --compose-box-line-height: 27px;
+  --submit-button-width: 44px;
+}
+
+body.sh-992 {
+  --small-font-size: 14px;
+  --normal-font-size: 16px;
+  --large-font-size: 16px;
+
+  --platform-icon-size: 20px;
+  --platform-tag-icon-size: 16px;
+  --platform-tag-height: 26px;
+  --compose-box-font-size: 16px;
+  --compose-box-line-height: 27px;
+  --submit-button-width: 45px;
+}
+
+body.sh-900 {
+  --small-font-size: 13px;
+  --normal-font-size: 14px;
+  --large-font-size: 14px;
+
+  --platform-icon-size: 20px;
+  --platform-tag-icon-size: 14px;
+  --platform-tag-height: 23px;
+  --compose-box-font-size: 16px;
+  --compose-box-line-height: 24px;
+  --submit-button-width: 48px;
+}
+
+body.sh-768 {
+  --small-font-size: 12px;
+  --normal-font-size: 14px;
+  --large-font-size: 12px;
+
+  --platform-icon-size: 15px;
+  --platform-tag-icon-size: 11px;
+  --platform-tag-height: 22px;
+  --compose-box-font-size: 14px;
+  --compose-box-line-height: 22px;
+  --submit-button-width: 39px;
+}
+
+body.sh-mini {
+  --small-font-size: 12px;
+  --normal-font-size: 14px;
+  --large-font-size: 12px;
+
+  --platform-icon-size: 16px;
+  --platform-tag-icon-size: 11px;
+  --platform-tag-height: 22px;
+  --compose-box-font-size: 14px;
+  --compose-box-line-height: 22px;
+  --submit-button-width: 32px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Satoshi', sans-serif;
+  /* font-family: '.SFNSText-Regular', 'BlinkMacSystemFont', 'Helvetica Neue',
+    'Segoe UI', 'Arial', sans-serif; */
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  height: calc(100% - 2 * var(--app-margin));
+  margin: var(--app-margin);
+  border-radius: var(--app-border);
+  box-shadow: 0 0 20px rgb(136 136 136 / 25%);
+  font-size: var(--normal-font-size) !important;
+}
+body.maximized {
+  --app-margin: 0px;
+}
+
+body:not(.focused):not(.app-hide):not(.operation-page):not(.sh-max) {
+  opacity: 0.7;
+}
+
+::selection {
+  background: #4d9b9a;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+  border-radius: 6px;
+}
+
+textarea {
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  background: white;
+  box-shadow: 0px 0px 16px 0px rgba(85, 90, 98, 0.1);
+}
+
+#webviews {
+  margin-top: var(--app-top-menu-bar-height);
+}
+
+#react-root[data-mode='app'] {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: var(--app-margin);
+  bottom: var(--app-margin);
+  left: var(--app-margin);
+  right: var(--app-margin);
+  z-index: 3;
+  overflow: hidden;
+  border-radius: var(--app-border);
+}
+
+.appContainer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: var(--app-background-color);
+
+  &-content {
+    position: relative;
+  }
+}
+
+.pageWrapper {
+  flex: 1;
+  display: flex;
+  overflow: auto;
+  position: relative;
+  /* border-left: 1px solid gray;
+  border-right: 1px solid gray; */
+}
+
+.page {
+  flex: 1;
+  display: flex;
+}
+
+@keyframes page-appear {
+  0% {
+    transform: translate(0, -100%);
+  }
+
+  100% {
+  }
+}
+
+@keyframes page-disappear {
+  0% {
+  }
+
+  100% {
+    transform: translate(0, -100%);
+  }
+}
+
+// screen height 768px
+@media only screen and (min-width: 1024px) {
+  body.sh-max {
+    --app-container-width: 600px;
+
+    --small-font-size: 12px;
+    --normal-font-size: 14px;
+    --large-font-size: 12px;
+
+    --platform-icon-size: 15px;
+    --platform-tag-icon-size: 11px;
+    --platform-tag-height: 22px;
+    --compose-box-font-size: 14px;
+    --compose-box-line-height: 22px;
+    --submit-button-width: 39px;
+  }
+}
+// screen height 900
+@media only screen and (min-width: 1440px) {
+  body.sh-max {
+    --app-container-width: 650px;
+
+    --small-font-size: 13px;
+    --normal-font-size: 14px;
+    --large-font-size: 14px;
+
+    --platform-icon-size: 20px;
+    --platform-tag-icon-size: 14px;
+    --platform-tag-height: 23px;
+    --compose-box-font-size: 16px;
+    --compose-box-line-height: 24px;
+    --submit-button-width: 48px;
+  }
+}
+// screen height 992
+@media only screen and (min-width: 1768px) {
+  body.sh-max {
+    --app-container-width: 700px;
+
+    --small-font-size: 14px;
+    --normal-font-size: 16px;
+    --large-font-size: 16px;
+
+    --platform-icon-size: 20px;
+    --platform-tag-icon-size: 16px;
+    --platform-tag-height: 26px;
+    --compose-box-font-size: 16px;
+    --compose-box-line-height: 27px;
+    --submit-button-width: 45px;
+  }
+}
+// screen height 1080
+@media only screen and (min-width: 1920px) {
+  body.sh-max {
+    --app-container-width: 876px;
+
+    --small-font-size: 14px;
+    --normal-font-size: 16px;
+    --large-font-size: 16px;
+
+    --platform-icon-size: 20px;
+    --platform-tag-icon-size: 16px;
+    --platform-tag-height: 26px;
+    --compose-box-font-size: 16px;
+    --compose-box-line-height: 27px;
+    --submit-button-width: 44px;
+  }
+}
